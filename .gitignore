@@ -6,3 +6,22 @@ embeddings/text8.zip
 
 .ipynb_checkpoints/
 .idea/
+image-classification/__pycache__/
+image-classification/checkpoint
+image-classification/cifar-10-batches-py/
+image-classification/cifar-10-python.tar.gz
+image-classification/dlnd_image_classification-Copy1.ipynb
+image-classification/dlnd_image_classification.html
+image-classification/dlnd_image_classification.zip
+image-classification/image_classification.data-00000-of-00001
+image-classification/image_classification.index
+image-classification/image_classification.meta
+image-classification/preprocess_batch_1.p
+image-classification/preprocess_batch_2.p
+image-classification/preprocess_batch_3.p
+image-classification/preprocess_batch_4.p
+image-classification/preprocess_batch_5.p
+image-classification/preprocess_test.p
+image-classification/preprocess_validation.p
+intro-to-tensorflow/tmp.py
+
