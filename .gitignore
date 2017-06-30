@@ -7,6 +7,11 @@ face_generation/data/
 
 .ipynb_checkpoints/
 
+tv-script-generation/save.*
+tv-script-generation/checkpoint
+seq2seq/checkpoint
+seq2seq/best_model.*
+
 
 *.pyc
 *.p
