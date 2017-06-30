@@ -4,6 +4,8 @@
 embeddings/data/
 embeddings/text8.zip
 face_generation/data/
+reinforcement/checkpoints/
+language-translation/language_translation.zip
 
 .ipynb_checkpoints/
 
@@ -16,6 +18,7 @@ seq2seq/best_model.*
 *.pyc
 *.p
 *.pkl 
+*.2mdl
 
 */.floyd*
 

@@ -1,0 +1,311 @@
+{UTF-8}
+"[decoding layer train]"  = A FUNCTION OF( keep prob)
+	~	
+	~		|
+
+batch size  = A FUNCTION OF( )
+	~	
+	~		|
+
+dec cell  = A FUNCTION OF( keep prob,num layers,rnn size)
+	~	
+	~		|
+
+dec embed input  = A FUNCTION OF( dec embeddings,dec input)
+	~	
+	~		|
+
+dec embeddings  = A FUNCTION OF( decoding embedding size,"len(target vocab to int)")
+	~	
+	~		|
+
+dec inference BasicDecoder  = A FUNCTION OF( dec cell,enc state,"inference helper GreedyEmbedding:Helper"\
+		,output layer)
+	~	
+	~		|
+
+dec input  = A FUNCTION OF( process decoder input)
+	~	
+	~		|
+
+dec train BasicDecoder  = A FUNCTION OF( dec cell,dec train TrainingHelper,enc state,\
+		output layer)
+	~	
+	~		|
+
+dec train TrainingHelper  = A FUNCTION OF( dec embed input,target seq length)
+	~	
+	~		|
+
+decoding embedding size  = A FUNCTION OF( )
+	~	
+	~		|
+
+"decoding layer ."  = A FUNCTION OF( )
+	~	
+	~		|
+
+decoding layer infer  = A FUNCTION OF( keep prob,"len(target vocab to int)")
+	~	
+	~		|
+
+enc cell  = A FUNCTION OF( keep prob,num layers,rnn size)
+	~	
+	~		|
+
+enc state  = A FUNCTION OF( "tf.nn.dynamic rnn()")
+	~	
+	~		|
+
+encoding embedding size  = A FUNCTION OF( )
+	~	
+	~		|
+
+encoding layer  = A FUNCTION OF( source seq length)
+	~	
+	~		|
+
+"Encoding layer."  = A FUNCTION OF( )
+	~	
+	~		|
+
+inference decoder output  = A FUNCTION OF( "tf.contrib.seq2seq.dynamic decode()")
+	~	
+	~		|
+
+"inference helper GreedyEmbedding:Helper"  = A FUNCTION OF( dec embeddings,start tokens\
+		,target vocab to int)
+	~	
+	~		|
+
+input data  = A FUNCTION OF( )
+	~	
+	~		|
+
+keep prob  = A FUNCTION OF( )
+	~	
+	~		|
+
+"len(source vocab to int)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"len(target vocab to int)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+max target seq length  = A FUNCTION OF( )
+	~	
+	~		|
+
+num layers  = A FUNCTION OF( )
+	~	
+	~		|
+
+output layer  = A FUNCTION OF( "len(target vocab to int)")
+	~	
+	~		|
+
+process decoder input  = A FUNCTION OF( batch size,target vocab to int,targets)
+	~	
+	~		|
+
+rnn size  = A FUNCTION OF( )
+	~	
+	~		|
+
+seq2seq model  = A FUNCTION OF( )
+	~	
+	~		|
+
+source seq length  = A FUNCTION OF( )
+	~	
+	~		|
+
+start tokens  = A FUNCTION OF( batch size)
+	~	
+	~		|
+
+target seq length  = A FUNCTION OF( )
+	~	
+	~		|
+
+target vocab to int  = A FUNCTION OF( )
+	~	
+	~		|
+
+targets  = A FUNCTION OF( )
+	~	
+	~		|
+
+"tf.contrib.layers.embed sequence()"  = A FUNCTION OF( encoding embedding size,"len(source vocab to int)"\
+		,"tf.reverse()")
+	~	
+	~		|
+
+"tf.contrib.seq2seq.dynamic decode"  = A FUNCTION OF( dec train BasicDecoder,max target seq length\
+		)
+	~	
+	~		|
+
+"tf.contrib.seq2seq.dynamic decode()"  = A FUNCTION OF( dec inference BasicDecoder,max target seq length\
+		)
+	~	
+	~		|
+
+"tf.nn.dynamic rnn()"  = A FUNCTION OF( enc cell,"tf.contrib.layers.embed sequence()"\
+		)
+	~	
+	~		|
+
+"tf.reverse()"  = A FUNCTION OF( input data)
+	~	
+	~		|
+
+training decoder output  = A FUNCTION OF( "tf.contrib.seq2seq.dynamic decode")
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,input data,286,-26,32,11,8,3,0,0,0,0,0,0
+10,2,"tf.reverse()",444,-30,35,11,8,3,0,0,0,0,0,0
+10,3,targets,334,414,22,11,8,3,0,0,0,0,0,0
+10,4,keep prob,314,139,34,11,8,3,0,0,0,0,0,0
+10,5,batch size,322,347,32,11,8,3,0,0,0,0,0,0
+10,6,source seq length,301,14,54,11,8,3,0,0,0,0,0,0
+10,7,target seq length,278,296,51,11,8,3,0,0,0,0,0,0
+10,8,max target seq length,1055,374,47,19,8,3,0,0,0,0,0,0
+10,9,"len(source vocab to int)",322,62,79,15,8,131,0,0,0,0,0,0
+10,10,"len(target vocab to int)",384,519,96,14,8,131,0,0,0,0,0,0
+10,11,encoding embedding size,291,100,86,17,8,131,0,0,0,0,0,0
+10,12,decoding embedding size,384,572,90,14,8,131,0,0,0,0,0,0
+10,13,rnn size,315,193,25,11,8,3,0,0,0,0,0,0
+10,14,num layers,313,242,34,11,8,3,0,0,0,0,0,0
+10,15,target vocab to int,361,453,57,11,8,3,0,0,0,0,0,0
+1,16,1,2,0,0,0,0,0,64,0,-1--1--1,,1|(357,-28)|
+10,17,seq2seq model,849,-74,404,15,3,131,0,0,0,0,0,0
+10,19,encoding layer,125,103,46,11,8,3,0,0,0,0,0,0
+1,20,2,87,0,0,0,0,0,64,0,-1--1--1,,1|(516,-1)|
+1,21,13,88,0,0,0,0,0,64,0,-1--1--1,,1|(458,166)|
+1,22,14,88,0,0,0,0,0,64,0,-1--1--1,,1|(461,190)|
+1,23,4,88,0,0,0,0,0,64,0,-1--1--1,,1|(462,138)|
+1,24,6,19,0,0,0,2,2,64,0,-1--1--1,|0||-1--1--1,1|(219,55)|
+1,25,9,87,0,0,0,0,0,64,0,-1--1--1,,1|(468,52)|
+1,26,11,87,0,0,0,0,0,64,0,-1--1--1,,1|(457,70)|
+10,27,dec input,559,340,30,11,8,3,0,0,0,0,0,0
+10,28,enc state,858,360,29,11,8,3,0,0,0,0,0,0
+10,29,process decoder input,464,337,54,19,8,3,0,0,0,0,0,0
+1,30,3,29,0,0,0,0,0,64,0,-1--1--1,,1|(386,383)|
+1,31,15,29,0,0,0,0,0,64,0,-1--1--1,,1|(403,404)|
+1,32,5,29,0,0,0,0,0,64,0,-1--1--1,,1|(376,343)|
+1,35,29,27,0,0,0,0,0,64,0,-1--1--1,,1|(516,337)|
+1,36,27,52,0,0,0,0,0,64,0,-1--1--1,,1|(646,311)|
+1,37,28,73,0,0,0,0,0,64,0,-1--1--1,,1|(922,307)|
+1,38,7,72,0,0,0,0,0,64,0,-1--1--1,,1|(561,259)|
+1,39,8,75,0,0,0,0,0,64,0,-1--1--1,,1|(1107,312)|
+1,40,13,54,0,0,0,0,0,64,0,-1--1--1,,1|(538,278)|
+1,41,14,54,0,0,0,0,0,64,0,-1--1--1,,1|(541,305)|
+1,42,15,79,0,0,0,0,0,64,0,-1--1--1,,1|(589,502)|
+1,43,10,63,0,0,0,0,0,64,0,-1--1--1,,1|(546,542)|
+1,44,5,78,0,0,0,0,0,64,0,-1--1--1,,1|(579,421)|
+1,45,4,54,0,0,0,0,0,64,0,-1--1--1,,1|(537,251)|
+1,46,12,63,0,0,0,0,0,64,0,-1--1--1,,1|(544,567)|
+10,47,training decoder output,1290,344,52,19,8,3,0,0,0,0,0,0
+10,48,inference decoder output,1290,427,57,19,8,3,0,0,0,0,0,0
+10,51,output layer,961,360,38,11,8,3,0,0,0,0,0,0
+10,52,dec embed input,751,277,52,11,8,3,0,0,0,0,0,0
+10,53,"decoding layer .",999,419,389,222,3,131,5,0,3,0,0,0
+10,54,dec cell,775,371,25,11,8,3,0,0,0,0,0,0
+10,55,"[decoding layer train]",109,207,49,19,8,131,0,0,0,0,0,0
+1,56,54,73,0,0,0,0,0,64,0,-1--1--1,,1|(878,312)|
+1,57,52,72,0,0,0,0,0,64,0,-1--1--1,,1|(791,256)|
+1,58,51,73,0,0,0,0,0,64,0,-1--1--1,,1|(980,310)|
+1,59,4,55,1,0,0,2,2,64,0,-1--1--1,|0||-1--1--1,1|(220,173)|
+10,60,decoding layer infer,83,339,47,19,8,3,0,0,0,0,0,0
+1,61,28,81,0,0,0,0,0,64,0,-1--1--1,,1|(940,452)|
+1,62,54,81,0,0,0,0,0,64,0,-1--1--1,,1|(896,459)|
+10,63,dec embeddings,680,563,51,11,8,3,0,0,0,0,0,0
+1,64,63,52,0,0,0,0,0,64,0,-1--1--1,,1|(713,426)|
+1,65,63,79,0,0,0,0,0,64,0,-1--1--1,,1|(747,563)|
+1,66,8,84,0,0,0,0,0,64,0,-1--1--1,,1|(1126,459)|
+1,67,10,51,0,0,0,0,0,64,0,-1--1--1,,1|(671,439)|
+1,68,51,81,0,0,0,0,0,64,0,-1--1--1,,1|(996,451)|
+1,69,4,60,0,0,0,2,2,64,0,-1--1--1,|0||-1--1--1,1|(208,230)|
+10,72,dec train TrainingHelper,861,222,54,19,8,3,0,16,0,0,0,0,-1--1--1,0-0-0,|0|B|0-0-0
+10,73,dec train BasicDecoder,1009,239,46,19,8,3,0,0,0,0,0,0
+1,74,72,73,0,0,0,0,0,64,0,-1--1--1,,1|(932,229)|
+10,75,"tf.contrib.seq2seq.dynamic decode",1170,241,85,19,8,3,0,0,0,0,0,0
+1,76,73,75,0,0,0,0,0,64,0,-1--1--1,,1|(1063,239)|
+1,77,75,47,0,0,0,0,0,64,0,-1--1--1,,1|(1224,287)|
+10,78,start tokens,856,502,37,11,8,3,0,0,0,0,0,0
+10,79,"inference helper GreedyEmbedding:Helper",870,563,92,19,8,3,0,16,0,0,0,0,-1--1--1,0-0-0,|0|B|0-0-0
+1,80,78,79,0,0,0,0,0,64,0,-1--1--1,,1|(859,521)|
+10,81,dec inference BasicDecoder,1041,564,46,19,8,3,0,0,0,0,0,0
+1,82,79,81,0,0,0,0,0,64,0,-1--1--1,,1|(971,563)|
+1,83,10,60,0,0,0,2,2,64,0,-1--1--1,|0||-1--1--1,1|(244,435)|
+10,84,"tf.contrib.seq2seq.dynamic decode()",1209,555,85,19,8,3,0,0,0,0,0,0
+1,85,84,48,0,0,0,0,0,64,0,-1--1--1,,1|(1245,496)|
+1,86,81,84,0,0,0,0,0,64,0,-1--1--1,,1|(1098,561)|
+10,87,"tf.contrib.layers.embed sequence()",622,42,73,19,8,3,0,0,0,0,0,0
+10,88,enc cell,616,138,25,11,8,3,0,0,0,0,0,0
+10,89,"tf.nn.dynamic rnn()",736,115,59,11,8,3,0,0,0,0,0,0
+1,90,88,89,0,0,0,0,0,64,0,-1--1--1,,1|(652,131)|
+1,91,87,89,0,0,0,0,0,64,0,-1--1--1,,1|(678,78)|
+1,92,89,28,0,0,0,0,0,64,0,-1--1--1,,1|(793,231)|
+10,93,"Encoding layer.",665,85,146,95,3,131,5,0,3,0,0,0
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:dec embed input
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+24:0
+25:0
+26:0
